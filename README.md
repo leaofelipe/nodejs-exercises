@@ -2,5 +2,5 @@
 
 #### Current exercises content:  
 ##### NodeJS basics:
-* ~~Asynchronous Code~~  
+* [Asynchronous Code](NodeJS_Basics/asynchronous/)  
 * [Event Emitters](NodeJS_Basics/event_emitters/)  
