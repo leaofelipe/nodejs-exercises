@@ -2,46 +2,44 @@
 * Callback vs. Events
 */
 
-const request = require('request'),
-	  EventEmitter = require('events').EventEmitter;
+const request = require('request')
 
-let emitter = new EventEmitter(),
-	requestOptions = {
-		url: 'https://api.github.com/orgs/nodejs/repos',
-		headers: {
-			'user-agent': 'node.js'
-		}
-	};
+let requestOptions = {
+  url: 'https://api.github.com/orgs/nodejs/repos',
+  headers: {
+    'user-agent': 'node.js'
+  }
+}
 
 /**
 * Callback
 */
 function myCallback (err, response, body) {
-	if (err) {
-		console.log('=(');
-		return false;
-	}
+  if (err) {
+    console.log('=(', err)
+    return false
+  }
 
-	console.log(body.length);
-};
+  console.log(body.length)
+}
 
-request(requestOptions, myCallback);
+request(requestOptions, myCallback)
 
 /**
 * Events
 **/
-let requestEvents = request(requestOptions);
-let data = '';
+let requestEvents = request(requestOptions)
+let data = ''
 
-requestEvents.on('data', function (response) {
-	data += response;
-});
+requestEvents.on('data', (response) => {
+  data += response
+})
 
-requestEvents.on('end', function () {
-	console.log(data.length);
-});
+requestEvents.on('end', () => {
+  console.log(data.length)
+})
 
-requestEvents.on('error', function (error) {
-	console.log('=(');
-});
+requestEvents.on('error', (error) => {
+  console.log('=(', error)
+})
 
