@@ -1,0 +1,6 @@
+{
+  "name": "nodejs-exercises",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
