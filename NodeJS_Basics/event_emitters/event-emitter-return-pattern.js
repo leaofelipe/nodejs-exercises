@@ -9,11 +9,11 @@ let randomNumber = Math.floor(Math.random() * 20)
 function getSource (max) {
   let emitter = new EventEmitter()
 
-  process.nextTick(function () {
+  process.nextTick(() => {
     let count = 0
     emitter.emit('start')
 
-    let t = setInterval(function () {
+    let t = setInterval(() => {
       emitter.emit('data', ++count)
       if (count === max) {
         emitter.emit('end', count)

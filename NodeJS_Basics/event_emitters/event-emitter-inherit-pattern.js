@@ -9,11 +9,11 @@ function Resource (num) {
   let max = num
   let self = this
 
-  process.nextTick(function () {
+  process.nextTick(() => {
     let count = 0
     self.emit('start')
 
-    let t = setInterval(function () {
+    let t = setInterval(() => {
       self.emit('data', ++count)
       if (count === max) {
         self.emit('end', count)
@@ -27,14 +27,14 @@ util.inherits(Resource, emitter)
 
 let res = new Resource(5)
 
-res.on('data', function (response) {
+res.on('data', response => {
   console.log(`Data -> ${response}`)
 })
 
-res.on('start', function () {
+res.on('start', () => {
   console.log('It starts!')
 })
 
-res.on('end', function (total) {
+res.on('end', (total) => {
   console.log(`Total of ${total} events displayed`)
 })

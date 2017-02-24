@@ -8,7 +8,7 @@ function callme () {
 
 function callme2 () {
   console.log('Tick D')
-  process.nextTick(function () {
+  process.nextTick(() => {
     console.log('Tick B')
   })
 }

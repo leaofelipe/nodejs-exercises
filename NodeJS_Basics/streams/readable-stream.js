@@ -25,14 +25,14 @@ function update (data) {
   console.log(`${data.length} (${percent}%) of ${requestLength} (100%)`)
 }
 
-stream.on('response', function (data) {
+stream.on('response', (data) => {
   requestLength = data.headers['content-length']
 })
 stream.on('data', update)
-stream.on('end', function () {
+stream.on('end', () => {
   console.log('Stream completed!')
 })
 
-stream.on('error', function (error) {
+stream.on('error', (error) => {
   console.log(error)
 })
