@@ -13,7 +13,10 @@ function memoryStatus () {
 
   setInterval(() => {
     let mem = os.freemem()
-    emitter.emit('data', mem.toString())
+    if (mem !== historyMem) {
+      historyMem = mem
+      emitter.emit('data', mem.toString())
+    }
   }, 1000)
 
   return emitter
