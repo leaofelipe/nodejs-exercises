@@ -1,6 +1,7 @@
 {
   "name": "nodejs-exercises",
   "dependencies": {
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "socket.io": "^1.7.3"
   }
 }

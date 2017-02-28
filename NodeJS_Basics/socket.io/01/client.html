@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Socket.io example</title>
+  <script src="https://cdn.socket.io/socket.io-1.7.3.js"></script>
+  <script>
+    let socket
+
+    function main () {
+      socket = io.connect()
+      socket.on('time', function (data) {
+        document.getElementById('timer').innerHTML = data;
+      })
+    }
+
+    function submitForm () {
+      let data = document.getElementById('inputData').value
+      console.log('submited')
+      socket.emit('submit', data)
+    }
+
+  </script>
+</head>
+<body onload="main()">
+  <h1>Sample Socket.io</h1>
+  <p>Time: <span id="timer"></span></p>
+  <form action="#">
+    <input type="text" placeholder="data" id="inputData" />
+    <input type="button" onclick="submitForm()" value="Submit" />
+  </form>
+</body>
+</html>
