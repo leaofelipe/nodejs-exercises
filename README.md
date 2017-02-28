@@ -8,5 +8,6 @@
 * [File System]('filesystem/')
 * [process]('process/')
 * [Buffer]('buffer/')
+* [Web interaction](.web-interaction/)
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
