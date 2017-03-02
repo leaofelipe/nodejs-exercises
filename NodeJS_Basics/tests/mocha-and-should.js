@@ -17,7 +17,7 @@ describe('MathFun', function () {
   })
 
   describe('when used asyncronously', function () {
-    it ('should double even numbers correctly', function (done) {
+    it.skip ('should double even numbers correctly', function (done) { //skip or ONLY
       mf.evenDoublerAsync(2, function (err, results) {
         should.not.exist(err) // err.should.not..... ERROR IS UNDEFINED
         results.should.equal(4)
