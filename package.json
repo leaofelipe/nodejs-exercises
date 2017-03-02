@@ -1,5 +1,8 @@
 {
   "name": "nodejs-exercises",
+  "standard": {
+    "env": [ "mocha" ]
+  },
   "dependencies": {
     "request": "^2.79.0",
     "socket.io": "^1.7.3"
