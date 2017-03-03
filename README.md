@@ -12,5 +12,7 @@
 * [Socket.io](NodeJS_Basics/socket.io/)
 * [Tests](NodeJS_Basics/tests/)  
 * [Debug](NodeJS_Basics/debug/)
+* [Child Process](NodeJS_Basics/child-processes/)
+* [Cluster](NodeJS_Basics/cluster/)
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
