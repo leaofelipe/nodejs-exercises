@@ -1,5 +1,7 @@
 {
   "name": "nodejs-exercises",
+  "private": "true",
+  "license": "WTFPL",
   "standard": {
     "env": [
       "mocha"
