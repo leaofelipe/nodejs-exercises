@@ -2,6 +2,9 @@
   "name": "nodejs-exercises",
   "private": "true",
   "license": "WTFPL",
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
   "standard": {
     "env": [
       "mocha"

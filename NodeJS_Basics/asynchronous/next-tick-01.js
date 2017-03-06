@@ -2,17 +2,24 @@
 * Node NextTick
 */
 
+let myArr = []
+
 function callme () {
-  console.log('Tick A')
+  myArr.push(1)
 }
 
 function callme2 () {
-  console.log('Tick D')
+  myArr.push(4)
   process.nextTick(() => {
-    console.log('Tick B')
+    myArr.push(2)
   })
 }
 
-process.nextTick(callme)
-callme2()
-console.log('Tick C')
+function Main () {
+  process.nextTick(callme)
+  callme2()
+  myArr.push(3)
+  return myArr
+}
+
+module.exports = Main
